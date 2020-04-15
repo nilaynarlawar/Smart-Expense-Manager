@@ -1,5 +1,5 @@
-# sideProject-nnarlawar
-sideProject-nnarlawar created by GitHub Classroom
+#Smart Expense Manager
+
 
 How to run and install UI and Backend Project:
 You need to have node and npm installed on your machine to run UI project. Also you need to have angular and ionic framework installed.
