@@ -1,0 +1,14 @@
+{
+  "name": "Smart-Expense-Manager",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://localhost:8080/smart"
+    }
+  ]
+}

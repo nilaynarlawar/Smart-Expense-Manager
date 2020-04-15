@@ -1,0 +1,31 @@
+  agm-map {
+      height: 400px !important; /* This is really important*/
+      width: 100%;
+    }
+  .fileInput{
+    display: none;
+  }
+  #labelforFile{
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    top: 15px;
+    background: #4f289c;
+    color: white;
+    font: 400 13.3333px Arial;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .AddBtn{
+    margin-top:30px;
+  }
+  .receiptLbl{
+    position: relative;
+    top: 14px;
+    font-size: medium;
+    font-weight: bold;
+    margin-right: 11px;
+    margin-left: 25px;
+  }
+
+

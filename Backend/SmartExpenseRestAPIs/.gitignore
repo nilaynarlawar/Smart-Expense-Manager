@@ -1,0 +1,8 @@
+.idea/*
+*.log
+*.iml
+sh.exe.stackdump
+build/*
+.gradle
+classes/*
+out/*

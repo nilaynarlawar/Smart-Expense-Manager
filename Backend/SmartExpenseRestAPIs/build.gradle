@@ -1,0 +1,79 @@
+apply plugin:'java'
+apply plugin: 'war'
+
+group 'smartapi'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+test{
+    systemProperties System.properties
+}
+
+war{
+    baseName='smartapi'
+    archiveName='smartapi.war'
+}
+
+repositories {
+    mavenCentral()
+}
+
+buildscript{
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath"mysql:mysql-connector-java:8.0.15"
+    }
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile'org.springframework:spring-aop:5.1.4.RELEASE'
+    compile'org.springframework:spring-aspects:5.1.4.RELEASE'
+    compile'org.springframework:spring-beans:5.1.4.RELEASE'
+    compile'org.springframework:spring-context:5.1.4.RELEASE'
+    compile'org.springframework:spring-core:5.1.4.RELEASE'
+    compile'org.springframework:spring-expression:5.1.4.RELEASE'
+    compile'org.springframework:spring-jdbc:5.1.4.RELEASE'
+    compile'org.springframework:spring-web:5.1.4.RELEASE'
+    compile'org.springframework:spring-webmvc:5.1.4.RELEASE'
+
+    // Usedfor Java-JSON marshalling and unmarshalling for REST calls
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile'com.fasterxml.jackson.core:jackson-databind:2.9.8'
+
+    // Usedfor HTTP client call
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+
+    compile'org.apache.commons:commons-lang3:3.0'
+
+    //Apache POI for reading and writing MS Excel file format
+//    compile 'org.apache.poi:poi:3.16'
+//    compile'org.apache.poi:poi-ooxml:3.16'
+
+    // MySQL JDBC Driver
+    compile 'mysql:mysql-connector-java:8.0.15'
+
+    //Logging
+    compile 'log4j:log4j:1.2.17'
+
+   //validation-api
+   compile 'javax.validation:validation-api:2.0.1.Final'
+
+
+    // JSTL
+   compile 'javax.servlet:javax.servlet-api:3.1.0'
+   compile'javax.servlet.jsp:javax.servlet.jsp-api:2.3.2-b02'
+   //compile'javax.servlet:jstl:1.2'
+
+    // JUnit
+   testCompile 'junit:junit:4.12'
+   testCompile'org.springframework:spring-test:5.1.4.RELEASE'
+
+    //springsecurity
+    compile 'org.springframework.security:spring-security-web:4.2.4.RELEASE'
+    compile'org.springframework.security:spring-security-config:4.2.4.RELEASE'
+}

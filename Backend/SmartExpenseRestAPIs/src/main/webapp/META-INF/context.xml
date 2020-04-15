@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource
+            name="jdbc/SmartDS"
+            auth="Container"
+            type="javax.sql.DataSource"
+            maxTotal="100"
+            maxIdle="30"
+            maxWaitMillis="1000"
+            username="root"
+            password="root"
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/smartexpense?useSSL=false"
+            logAbandoned="true"
+            removeAbandonedOnBorrow="true"
+            removeAbandonedOnMaintenance="true"
+            removeAbandonedTimeout="60"
+    />
+</Context>
+
+

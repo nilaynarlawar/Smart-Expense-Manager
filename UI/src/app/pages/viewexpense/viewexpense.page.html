@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-title>View Expense</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid fixed>
+          <ion-row>
+              <ion-col size="2" >
+                      <ion-label>Filter:</ion-label>
+                      <ion-select [(ngModel)]="postData.filter" (ionChange)="getExpenses()">
+                          <ion-select-option value="vegetable">Vegetables</ion-select-option>
+                          <ion-select-option value="grocery">Grocery</ion-select-option>
+                          <ion-select-option value="automobile">Automobile</ion-select-option>
+                          <ion-select-option value="housing">Housing</ion-select-option>
+                      </ion-select>
+              </ion-col>
+               <ion-col size="10">
+                      <ion-label>Download as CSV </ion-label>
+                      <ion-button color="dark" (click)="downloadCSV()">
+                          <ion-icon name="md-download" color="light" ></ion-icon>
+                      </ion-button>
+              </ion-col>
+          </ion-row>
+  </ion-grid>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col
+              size="12"
+              size-xs="12"
+              size-sm="6"
+              size-md="4"
+              size-lg="3"
+              *ngFor="let expense of expenses">
+        <ion-card color="light">
+          <ion-card-header >
+              <ion-button color="dark"  align-items-end (click)="editExpense(expense.expenseId)">
+                  <ion-icon name="md-create" color="light" ></ion-icon>
+              </ion-button>
+              <ion-button color="dark" align-items-end (click)="deleteExpense(expense.expenseId)">
+                  <ion-icon name="md-trash" color="light" ></ion-icon>
+              </ion-button>
+            <ion-card-content align-items-center>
+                <div class="row" ng-repeat="data in ctrl.data">
+                    <div class="col">Name: {{expense.itemName}}</div>
+                    <div class="col">Description: {{expense.itemDescription}}</div>
+                    <div class="col">Category: {{expense.expenseCategory}}</div>
+                    <div class="col">Amount: {{expense.amount}}</div>
+                </div>
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

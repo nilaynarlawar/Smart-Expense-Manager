@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="4">
+            </ion-col>
+            <ion-col size="3">
+                <ion-card>
+                    <ion-card-content>
+
+                        <ion-item id="rounded">
+                        <ion-label position="stacked">Set Expense Limit</ion-label>
+                        <ion-input name="expenseLimit" type="text" placeholder="Type here to set limit"
+                                   [(ngModel)]="this.postData.userExpenselimit"></ion-input>
+                        </ion-item>
+                            <ion-button expand="block" color="dark" (click)="addLimit()">Save</ion-button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+        <ion-row *ngIf="!showPassword">
+            <ion-col size="4">
+            </ion-col>
+            <ion-col size="3">
+                <ion-card>
+                    <ion-card-content>
+                        <ion-button expand="block" color="dark" (click)="showPopup()">
+                            Click Here To change Password</ion-button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="showPassword">
+            <ion-col size="4">
+            </ion-col>
+            <ion-col size="3">
+                <ion-card>
+                    <ion-card-content>
+                        <ion-button expand="block" color="dark" (click)="hidePopup()">
+                            Hide Password change</ion-button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="showPassword">
+            <ion-col size="4">
+            </ion-col>
+            <ion-col size="3">
+                <ion-card>
+                    <ion-card-content>
+                      <ion-grid>
+                          <ion-row>
+                              <ion-col align-items-center>
+                                  <ion-item>
+                                  <ion-label position="stacked">Enter old password:</ion-label>
+                                  <ion-input [(ngModel)]="this.postData.oldPassword"
+                                             type="password" name="oldPassword" placeholder="Old Password"></ion-input>
+                                  </ion-item>
+                              </ion-col>
+                          </ion-row>
+                          <ion-row>
+                              <ion-col align-items-center>
+                                  <ion-item>
+                                  <ion-label position="stacked">Enter new password:</ion-label>
+                                  <ion-input [(ngModel)]="this.postData.password"
+                                             type="password" name="newPassword" placeholder="New Password"></ion-input>
+                                  </ion-item>
+                              </ion-col>
+                          </ion-row>
+                          <ion-row>
+                              <ion-col align-items-center>
+                                  <ion-item>
+                                  <ion-label position="stacked">Re-enter new password:</ion-label>
+                                  <ion-input type="password" name="reenterNewPassword" placeholder="Re-enter New Password">
+                                  </ion-input>
+                                  </ion-item>
+                              </ion-col>
+                          </ion-row>
+                          <ion-row>
+                              <ion-col align-items-center>
+                                      <ion-button expand="block" color="dark" (click)="updatePassword()">
+                                          Save</ion-button>
+                              </ion-col>
+                          </ion-row>
+                      </ion-grid>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

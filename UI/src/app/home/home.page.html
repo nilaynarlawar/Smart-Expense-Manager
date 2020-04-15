@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-card>
+    <ion-card-content style="font-weight: bold; color: #1e2023; padding-left: 40%">
+      Hello {{this.username}},
+      <br/> <ion-label style="color: #3171e0"> Welcome to Smart Expense Manager.</ion-label>
+      <br/> <ion-label style="font-style: italic"> Please select below options to add/edit/view expenses.</ion-label>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="bottom" color="dark">
+    <ion-tab-button tab="graph" color="danger" (click)="toRoute()">
+      <ion-icon name="md-analytics"></ion-icon>
+      <ion-label>Graph</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="addexpense" color="danger">
+      <ion-icon name="add-circle"></ion-icon>
+      <ion-label>Add Expense</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="settings" color="danger">
+      <ion-icon name="settings"></ion-icon>
+      <ion-label>Setting</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="viewexpense" color="danger">
+      <ion-icon name="md-eye"></ion-icon>
+      <ion-label>View Expense</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button color="danger" (click)="logout()">
+      <ion-icon name="md-log-out"></ion-icon>
+      <ion-label>Log out</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>
