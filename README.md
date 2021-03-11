@@ -1,7 +1,7 @@
-#Smart Expense Manager
+# Smart Expense Manager
 
 
-How to run and install UI and Backend Project:
+# How to run and install UI and Backend Project:
 You need to have node and npm installed on your machine to run UI project. Also you need to have angular and ionic framework installed.
 To install node: https://nodejs.org/en/download/
 To Install Angular Cli: https://cli.angular.io/
@@ -13,7 +13,7 @@ Steps to run the project:
 4. you should see local server started on 8100 port unless that port is in use.
 5. Go to browser and type "http://localhost:8100"
 
-How to run Backend project:
+# How to run Backend project:
 You need to have gradle installed on your machine and tomcat also.
 Gradle: https://ionicframework.com/docs/cli
 Tomcat: https://tomcat.apache.org/download-80.cgi
@@ -52,8 +52,7 @@ In this file I am storing DB connection details for JDNI to create db channel fo
  5. Deploy it on tomcat as root "smart" on 8080 port since UI is looking for "http://localhost:8080/smart" url for making REST Calls.
  
  
- References used
- : 
+ # References used 
  1] https://www.udemy.com/course/angular-tutorial/
  2] https://www.youtube.com/watch?v=DgWlNAudNlg&t=3s
  3] https://www.youtube.com/watch?v=NF_nnoA0aXM
@@ -62,6 +61,9 @@ In this file I am storing DB connection details for JDNI to create db channel fo
  6] https://ionicframework.com/docs/v3/
 
 
+# Postman Script
+
+You can find the Postman script [here]()
 
  
 
