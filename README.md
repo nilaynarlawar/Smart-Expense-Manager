@@ -63,7 +63,7 @@ In this file I am storing DB connection details for JDNI to create db channel fo
 
 # Postman Script
 
-You can find the Postman script [here]()
+You can find the Postman script [here](https://github.com/nilaynarlawar/Smart-Expense-Manager/blob/master/ExpenseAPI.postman_collection.json)
 
  
 
