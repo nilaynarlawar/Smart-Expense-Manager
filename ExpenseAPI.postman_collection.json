@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "02fcfe6d-fc7f-44f5-9b1c-deb3839d3be7",
+		"name": "ExpenseAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/smart/expense/getExpense?userId=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/smart/expense/getExpense?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smart",
+						"expense",
+						"getExpense"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Gives all the expenses"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/smart/expense/createExpense",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"itemName\":\"abc\",\r\n\"itemDescription\":\"Iteam abc\",\r\n\"amount\": \"12\",\r\n\"location\":\"USA,California\",\r\n\"transactionDate\":\"10/21/2019 10:20\",\r\n\"userId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/smart/expense/createExpense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smart",
+						"expense",
+						"createExpense"
+					]
+				},
+				"description": "Add Expense to DB"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/smart/expense/deleteExpense?expenseId=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/smart/expense/deleteExpense?expenseId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smart",
+						"expense",
+						"deleteExpense"
+					],
+					"query": [
+						{
+							"key": "expenseId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Delete the record from DB for given expense ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Expense List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/smart/expense/getExpenseList?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smart",
+						"expense",
+						"getExpenseList"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/smart/expense/getExpenseByExpenseId?userId=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/smart/expense/getExpenseByExpenseId?expenseId=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smart",
+						"expense",
+						"getExpenseByExpenseId"
+					],
+					"query": [
+						{
+							"key": "expenseId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/smart/expense/editExpense",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"itemName\":\"abc1\",\r\n\"itemDescription\":\"Iteam abc\",\r\n\"amount\": \"12\",\r\n\"location\":\"USA,California\",\r\n\"transactionDate\":\"10/21/2019 10:20\",\r\n\"userId\": 1,\r\n\"expenseId\":5\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/smart/expense/editExpense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smart",
+						"expense",
+						"editExpense"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
